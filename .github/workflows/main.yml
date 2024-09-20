@@ -12,9 +12,9 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Install Dependencies
-        run: npm
+        run: npm && npm install
       - name: Build
-        run: npm build
+        run: npm run build
       - name: SFTP Deploy
       # You may pin to the exact commit or the version.
       # uses: wlixcc/SFTP-Deploy-Action@da88a4dbe95286266bbac3c0b2b8284048d20c8f
