@@ -10,9 +10,6 @@ jobs:
         with:
           submodules: recursive
           token: ${{ secrets.ACCESS_TOKEN }}
-
-      - name: Install Dependencies
-        run: npm
       - name: Install NPM Dependencies
         run: npm install
       - name: Build App
