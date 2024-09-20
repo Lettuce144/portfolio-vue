@@ -1,0 +1,21 @@
+{
+  "Home_Short": "Dit is over mij",
+  "Home_Latest": "Nieuwste projecten",
+  "Home_Title": "Hi, ik ben Jens!",
+  "About_Work": "Je vraagt je vast af wie ik ben? Nou, ik ben Jens, 17 jaar oud en ik woon in Holwierde. Op dit moment studeer ik Software Development aan het Alfa-college op de locatie Boumaboulevard. Eigenlijk vind ik alles aan softwareontwikkeling leuk, maar mijn grootste interesse ligt toch bij de backend. Dat betekent echter niet dat ik me beperk tot alleen de backend van software; in mijn vrije tijd houd ik me bijvoorbeeld ook bezig met game development. Nu is ook wel uit mijn portfolio te herlijden dat UI design niet mijn sterkste kant is, al weet ik wel hoe ik met frameworks zoals React en Vue moet werken. Deze portfolio is dan ook gemaakt met Vue.",
+  "About_Sector": "De verantwoordelijkheid spreekt mij aan, omdat je ervoor zorgt dat een product goed, snel en veilig werkt. Ik haal meer plezier uit logisch nadenken en het bouwen van technische oplossingen dan uit frontend design.",
+  "About_Work_Title": "Mijn Verhaal",
+  "About_Sector_Title": "Motivatie",
+
+  "Contact": "Vraagje? neem contact op!", 
+  "name": "Naam",
+  "email": "Email",
+  "message": "Bericht",
+  "send_button": "Verstuur",
+
+  "MyWork": "Mijn werk",
+  "About": "Over mij",
+  "CV": "Mijn CV",
+
+  "All": "Alles"
+}

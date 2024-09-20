@@ -1,0 +1,40 @@
+/* ./src/index.css */
+@tailwind base;
+
+@layer base {
+    /* body {
+      @apply antialiased text-base text-text bg-secondary;
+    } */
+    h1 {
+      @apply text-2xl;
+    }
+    h2 {
+      @apply text-xl;
+    }
+    h3 {
+      @apply text-lg;
+    }
+    a {
+      @apply underline;
+    }
+    button{
+      @apply font-bold text-button-text-secondary bg-button px-4 py-2 rounded w-fit;
+    }
+    input, textarea{
+      @apply mt-1 py-1 text-button-text-secondary rounded-md w-full;
+    }
+    h1, h2, h3, h4, h5, h6{
+      @apply font-bold;
+    }
+    .tag{
+      cursor: pointer;
+      @apply bg-primary text-button-text-secondary text-sm font-medium px-2.5 py-0.5 rounded-md w-fit;
+    }
+
+    .enabled{
+      @apply bg-primary-disabled text-button-text-secondary;
+    }
+  }
+
+@tailwind components;
+@tailwind utilities;

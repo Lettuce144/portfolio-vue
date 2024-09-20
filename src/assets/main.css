@@ -1,0 +1,24 @@
+@import './base.css';
+
+#app {
+  height: 100vh;
+  /* zoom: 120%; */
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  padding: 2rem 4rem 2rem 4rem;
+  font-weight: normal;
+}
