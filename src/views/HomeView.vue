@@ -5,7 +5,7 @@ import ProjectCard from '@/components/ProjectCard.vue';
 <template>
   <!-- This should be global, but it works -->
   <main style="justify-content: center;">
-    <div class="main-rect rounded-t-3xl">
+    <div class="main-rect rounded-t-3xl max-w-6xl">
       <div class="main-info">
         <h1 class="text-home">{{ $t('Home_Title') }}</h1>
         <p>
