@@ -1,0 +1,41 @@
+on: [push]
+
+jobs:
+  deploy_job:
+    runs-on: ubuntu-latest
+    name: Deploy to website
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          token: ${{ secrets.ACCESS_TOKEN }}
+      - name: Install NPM Dependencies
+        run: npm install
+      - name: Build App
+        run: npm run build
+      - name: SFTP Deploy
+      # You may pin to the exact commit or the version.
+      # uses: wlixcc/SFTP-Deploy-Action@da88a4dbe95286266bbac3c0b2b8284048d20c8f
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          # username
+          username: 523038032.swh.strato-hosting.eu
+          # your sftp server
+          server: ssh.strato.com
+          # your sftp server port, default to 22
+          port: 22
+          # you can copy private_key from your *.pem file, keep format
+          ssh_private_key: 0
+          # will put all file under this path
+          local_path: './dist/*'
+          # files will copy to under remote_path
+          remote_path: /
+          # connection via sftp protocol only
+          sftp_only: true
+          # sftp args
+          sftpArgs: '-o ConnectTimeout=5'
+          # This operation will delete all files in the remote path before upload. Please be careful set this to true
+          delete_remote_files: false
+          # SSH passsword，If a password is set, the secret key pair is ignored
+          password: ${{secrets.MASTER_PASSWORD}}
