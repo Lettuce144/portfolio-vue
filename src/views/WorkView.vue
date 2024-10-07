@@ -6,7 +6,7 @@ import ExperienceCircle from '@/components/ExperienceCircle.vue';
     <main class="flex gap-8 flex-col">
       <div class="mt-4 bg-gray-900 border-2 border-gray-700 rounded-lg p-6 text-gray-100">
         <h2>{{ $t('Work_title') }}</h2>
-        <p>{{ $t('Work_cv_why') }} <a href="/src/assets/cv.pdf">{{ $t('work_cv_link') }}</a></p>
+        <p>{{ $t('Work_cv_why') }} <a href="cv.pdf">{{ $t('work_cv_link') }}</a></p>
         
         <h2 class="mt-4">{{ $t('Work_timeline') }}</h2>
         

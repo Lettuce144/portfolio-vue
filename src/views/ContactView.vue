@@ -27,7 +27,7 @@ const message = ref('');
       <div class="border-b-2 border-black pb-4 mb-4">
         <h4>You can find me on here:</h4>
         <a href="" class="block">LinkedIn</a>
-        <a href="" class="block">Youtube</a>
+        <a href="https://www.youtube.com/@lettuce9200" class="block">Youtube</a>
         <a href="https://github.com/Lettuce144?" class="block">GitHub</a>
       </div>
       <div class="border-b-2 border-black pb-4 mb-4">
