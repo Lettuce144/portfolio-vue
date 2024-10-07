@@ -29,9 +29,9 @@ import ExperienceCircle from '@/components/ExperienceCircle.vue';
         <div class="w-full bg-gray-900 border-2 border-gray-700 rounded-lg p-5 text-gray-100">
           <h2>{{$t('Work_lang')}}</h2>
           <ul class="flex flex-col list-inside list-disc">
-            <li>Dutch - Perfect</li>
-            <li>English - Perfect</li>
-            <li>German - Reasonble</li>
+            <li>{{$t('NL')}} - {{ $t('Lang_perfect') }}</li>
+            <li>{{$t('EN')}} - {{ $t('Lang_perfect') }}</li>
+            <li>{{$t('DE')}} - {{ $t('Lang_reasonble') }}</li>
           </ul>
         </div>
         <div class="w-full bg-gray-900 border-2 border-gray-700 rounded-lg p-5 text-gray-100">

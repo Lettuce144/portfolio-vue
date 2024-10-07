@@ -1,5 +1,5 @@
 {
-  "Home_Short": "Een ik ben 17 jaar oud en studeer Software Development aan het Alfa-college. Ik ben vooral bezig met backend development, maar houd me ook bezig met front-end en game development in mijn vrije tijd. Hier vind je mijn projecten, loopbaan, en meer informatie over mijn motivatie. Neem gerust contact op als je vragen hebt!",
+  "Home_Short": "En ik ben 17 jaar oud en studeer Software Development aan het Alfa-college. Ik ben vooral bezig met backend development, maar houd me ook bezig met front-end en game development in mijn vrije tijd. Hier vind je mijn projecten, loopbaan, en meer informatie over mijn motivatie. Neem gerust contact op als je vragen hebt!",
   "Home_Latest": "Nieuwste projecten",
   "Home_Title": "Hi, ik ben Jens!",
   "About_Work": "Je vraagt je vast af wie ik ben? Nou, ik ben Jens, 17 jaar oud en ik woon in Holwierde. Op dit moment studeer ik Software Development aan het Alfa-college op de locatie Boumaboulevard. Eigenlijk vind ik alles aan softwareontwikkeling leuk, maar mijn grootste interesse ligt toch bij de backend. Dat betekent echter niet dat ik me beperk tot alleen de backend van software; in mijn vrije tijd houd ik me bijvoorbeeld ook bezig met game development. Nu is ook wel uit mijn portfolio te herlijden dat UI design niet mijn sterkste kant is, al weet ik wel hoe ik met frameworks zoals React en Vue moet werken. Deze portfolio is dan ook gemaakt met Vue.",
@@ -30,6 +30,13 @@
   "Work_lang": "Talen",
   "Work_program_lang": "Programmeertalen",
   "Work_Tools": "Tools en Frameworks",
+
+  "NL" : "Nederlands",
+  "EN" : "Engels",
+  "DE" : "Duits",
+
+  "Lang_perfect": "Perfect",
+  "Lang_reasonble": "Matig",
 
   "Work_cv_why": "Omdat ik gedeeltelijk frontend werk doe en heb gedaan heb ik besloten om een digitale 'CV' te maken, maar als je liever een CV op 'papier' wilt kun je nog steeds ",
   "work_cv_link": "mijn 'analoge' CV downloaden.",
