@@ -1,11 +1,11 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import HeaderBar from './components/HeaderBar.vue'
+import IntroductionSection from './components/IntroductionSection.vue';
 </script>
 
 <template>
-   <HeaderBar/>
-   <RouterView />
+  <IntroductionSection />
+  <RouterView />
 </template>
 
 <style scoped>

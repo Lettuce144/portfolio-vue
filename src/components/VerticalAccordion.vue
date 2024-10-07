@@ -1,37 +1,44 @@
 <script setup>
-import { ref } from 'vue';
+  import { ref } from 'vue';
 
-defineProps({
-  items: Array
-})
+  defineProps({
+    title: String,
+  });
 
-const activeIndex = ref([])
+  const isOpen = ref(false);
+
+  const toggle = () => {
+    isOpen.value = !isOpen.value;
+  };
 </script>
 
 <template>
-    <div class="space-y-2">
-      <div v-for="(item, index) in items" :key="index" class="border border-gray-300 rounded-lg">
-        <button
-          @click="toggle(index)"
-          class="flex justify-between w-full p-4 bg-gray-100 hover:bg-gray-200 focus:outline-none"
-        >
-          <span>{{ item.title }}</span>
-          <svg
-            :class="{ 'transform rotate-180': activeIndex === index }"
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-5 h-5 transition-transform duration-200"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        <transition name="accordion" mode="out-in">
-          <div v-if="activeIndex === index" class="p-4 text-gray-700">
-            {{ item.content }}
-          </div>
-        </transition>
-      </div>
+  <div class="rounded-t-lg">
+    <button
+      @click="toggle"
+      class="w-full px-4 py-2 text-left flex justify-between items-center bg-primary text-white rounded-t-lg"
+    >
+      <span>{{ title }}</span>
+      <svg
+        :class="{'rotate-180': isOpen}"
+        class="w-5 h-5 transition-transform duration-300"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 9l-7 7-7-7"
+        />
+      </svg>
+    </button>
+
+    <div v-if="isOpen" class="p-4 text-text bg-primary-disabled">
+      <!-- Slot for passing dynamic content into the accordion -->
+      <slot></slot>
     </div>
-  </template>
+  </div>
+</template>

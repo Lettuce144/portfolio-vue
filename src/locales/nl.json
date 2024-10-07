@@ -1,5 +1,5 @@
 {
-  "Home_Short": "Dit is over mij",
+  "Home_Short": "Een ik ben 17 jaar oud en studeer Software Development aan het Alfa-college. Ik ben vooral bezig met backend development, maar houd me ook bezig met front-end en game development in mijn vrije tijd. Hier vind je mijn projecten, loopbaan, en meer informatie over mijn motivatie. Neem gerust contact op als je vragen hebt!",
   "Home_Latest": "Nieuwste projecten",
   "Home_Title": "Hi, ik ben Jens!",
   "About_Work": "Je vraagt je vast af wie ik ben? Nou, ik ben Jens, 17 jaar oud en ik woon in Holwierde. Op dit moment studeer ik Software Development aan het Alfa-college op de locatie Boumaboulevard. Eigenlijk vind ik alles aan softwareontwikkeling leuk, maar mijn grootste interesse ligt toch bij de backend. Dat betekent echter niet dat ik me beperk tot alleen de backend van software; in mijn vrije tijd houd ik me bijvoorbeeld ook bezig met game development. Nu is ook wel uit mijn portfolio te herlijden dat UI design niet mijn sterkste kant is, al weet ik wel hoe ik met frameworks zoals React en Vue moet werken. Deze portfolio is dan ook gemaakt met Vue.",
@@ -13,7 +13,30 @@
   "message": "Bericht",
   "send_button": "Verstuur",
 
-  "MyWork": "Mijn werk",
+  "plus_about": "Verantwoordelijk geweest voor het aanvullen van diverse artikelgroepen om te zorgen voor een gevulde en ordelijke supermarkt.",
+  "alfa_about": "MBO-4 Studie gericht voornamelijk op backend development, maar ook met focus op frontend en game development. Inclusief moderne technieken zoals API-integratie, versiebeheer, en projectmatig werken binnen teams.",
+  "woldendorp_about": "4 Jarige VMBO-TL opleiding afgerond met een ruim voldoende.",
+
+  "MyWork_Description": "Ervaringen etc, bevat ook mijn opleidingen, werkervaring en CV",
+  "Projects_Description": "Verschillende projecten waaraan ik werk of heb gewerkt.",
+  "Contact_Description": "Vragen of opmerkingen? Neem contact op!",
+  "About_Description": "Wie ik ben en mijn motivatie voor Software Development",
+
+  "Projects_Page_Title": "Mijn werk",
+
+  "Work_title": "Waarom een digitale CV?",
+  "Work_timeline": "Tijdlijn:",
+
+  "Work_lang": "Talen",
+  "Work_program_lang": "Programmeertalen",
+  "Work_Tools": "Tools en Frameworks",
+
+  "Work_cv_why": "Omdat ik gedeeltelijk frontend werk doe en heb gedaan heb ik besloten om een digitale 'CV' te maken, maar als je liever een CV op 'papier' wilt kun je nog steeds ",
+  "work_cv_link": "mijn 'analoge' CV downloaden.",
+
+  "MyWork": "Loopbaan",
+  "Projects": "Projecten",
+  "Contact_Block": "Contact",
   "About": "Over mij",
   "CV": "Mijn CV",
 

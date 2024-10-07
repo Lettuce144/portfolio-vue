@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import VerticalAccordion from '@/components/VerticalAccordion.vue';
 
 import * as THREE from 'three'
 
@@ -63,22 +64,18 @@ onMounted(() => {
 
 <template>
   <main>
-    <!-- <div ref="target"></div> -->
-    <div class="about">
-      <div id="about-main">
-        <h1>{{ $t('About_Work_Title') }}</h1>
-        <p>
-          {{ $t('About_Work') }}
-        </p>
-      </div>
-      <div id="about-additional">
-        <h2>{{ $t('About_Sector_Title') }}</h2>
-        <p>
-          {{ $t('About_Sector') }}
-        </p>
-      </div>
+    <!-- Accordion section -->
+    <div class="flex w-full flex-col gap-4 md:flex-row mt-4 bg-gray-900 border-2 border-gray-700 rounded-lg p-4">
+      <VerticalAccordion class="w-full md:w-1/2" :title="$t('About_Work_Title')">
+        <p>{{ $t('About_Work') }}</p>
+      </VerticalAccordion>
+
+      <VerticalAccordion class="w-full md:w-1/2" :title="$t('About_Sector_Title')">
+        <p>{{ $t('About_Sector') }}</p>
+      </VerticalAccordion>
     </div>
 
+    <!-- 3D section -->
     <div class="hidden holwierde" ref="target">
       <h6>Kerk van Holwierde</h6>
     </div>
@@ -86,18 +83,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.about {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.about p {
-  /* Wow this actually works really well */
-  max-width: 768px;
-  /* margin: 0 auto; */
-  /* font-size: 1.25em; */
-}
 
 .holwierde{
   border-radius: 25px;

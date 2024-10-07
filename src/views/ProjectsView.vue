@@ -1,7 +1,5 @@
 <script setup>
 import ProjectCard from '@/components/ProjectCard.vue'
-//import LabelElement from '@/components/LabelElement.vue'
-
 import { ref, onMounted, computed } from 'vue'
 
 const projects = ref([])
@@ -17,11 +15,10 @@ onMounted(async () => {
     }
   }
 
-  // Puts the data of my portfolio with the tag 'portfolio' in the projects array
   try {
     const response = await fetch(url, options)
     if (!response.ok) {
-      throw new Error('Request failed!');
+      throw new Error('Request failed!')
     }
     const data = await response.json()
     data.forEach((repo) => {
@@ -30,49 +27,50 @@ onMounted(async () => {
           title: repo.name,
           description: repo.description,
           link: repo.html_url,
+          stars: repo.stargazers_count,
+          commits: repo.commits_url.split('{')[0], // Fetch commits
           types: repo.topics
         })
       }
-    });
+    })
   } catch (error) {
-    console.log(error);
+    console.log(error)
   }
 })
 
-// Returns which cards to show based on the current filter
 const filteredProjects = computed(() => {
   if (!currentFilter.value) return projects.value
   return projects.value.filter(project => project.types.includes(currentFilter.value))
 })
 
-// Handle toggle event from child components
 function handleToggle(index) {
-  Filters.value = Filters.value.map((_, i) => i === index);
+  Filters.value = Filters.value.map((_, i) => i === index)
 }
 </script>
 
 <template>
-  <main>
-    <h1 class="mb-2">{{ $t('MyWork') }}</h1>
-    <div class="flex flex-wrap gap-1">
-      <!-- Used to be LabelElement! -->
+  <main class="mt-4 bg-gray-900 border-2 border-gray-700 rounded-lg p-6">
+    <h2 class="p-0 mb-4 text-4xl">{{ $t('Projects_Page_Title') }}</h2>
+    <!-- Filters -->
+    <div class="flex flex-wrap gap-2 mb-6">
       <span v-for="filter in Filters" 
         :key="filter" 
-        :is-disabled="currentFilter == filter" 
-        :class="{'enabled': currentFilter === filter}" class="tag"
+        :class="{'enabled': currentFilter === filter}" 
+        class="tag cursor-pointer"
         @click="currentFilter = filter"
         @toggle="handleToggle(filter)">
-        {{ filter.charAt(0).toUpperCase() + filter.slice(1) || $t('All') }}
+        {{ filter.charAt(0).toUpperCase() + filter.slice(1) || 'All' }}
       </span>
-      
     </div>
 
-    <div class="flex flex-wrap justify-between content-center flex-row items-start gap-6 font-normal mt-4">
+    <div class="flex flex-wrap gap-6">
       <ProjectCard
         v-for="(project, index) in filteredProjects"
         :key="index"
         :title="project.title"
         :description="project.description"
+        :stars="project.stars"
+        :commits="project.commits.length"
         :link="project.link"
         :types="project.types"
       />
@@ -81,8 +79,6 @@ function handleToggle(index) {
 </template>
 
 <style scoped>
-/* Remove the main style from main.css */
-/* Temp */
 main {
   display: block;
 }
