@@ -14,7 +14,7 @@ defineProps({
     <div class="relative flex flex-col items-center">
       <!-- Circle with Icon -->
       <div class="w-12 h-12 border-2 border-gray-700 rounded-2xl flex items-center justify-center">
-        <img class="invert h-8 w-8" :src="isWork ? '/src/assets/svg/job-icon.svg' : '/src/assets/svg/grad-icon.svg'" alt="Experience Image"/>
+        <img class="invert h-8 w-8" :src="isWork ? '/svg/job-icon.svg' : '/svg/grad-icon.svg'" alt="Experience Image"/>
       </div>
       
       <!-- Vertical Line -->
